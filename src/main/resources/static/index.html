@@ -2,12 +2,12 @@
 <html>
 <head>
     <title>Hello WebSocket</title>
-    <link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/main.css" rel="stylesheet">
-    <script src="/webjars/jquery/jquery.min.js"></script>
-    <script src="/webjars/sockjs-client/sockjs.min.js"></script>
-    <script src="/webjars/stomp-websocket/stomp.min.js"></script>
-    <script src="/app.js"></script>
+    <link href="/ticket-analytics-websocket-service-0.0.1-SNAPSHOT/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/ticket-analytics-websocket-service-0.0.1-SNAPSHOT/main.css" rel="stylesheet">
+    <script src="/ticket-analytics-websocket-service-0.0.1-SNAPSHOT/webjars/jquery/jquery.min.js"></script>
+    <script src="/ticket-analytics-websocket-service-0.0.1-SNAPSHOT/webjars/sockjs-client/sockjs.min.js"></script>
+    <script src="/ticket-analytics-websocket-service-0.0.1-SNAPSHOT/webjars/stomp-websocket/stomp.min.js"></script>
+    <script src="/ticket-analytics-websocket-service-0.0.1-SNAPSHOT/app.js"></script>
 </head>
 <body>
 <noscript><h2 style="color: #ff0000">Seems your browser doesn't support Javascript! Websocket relies on Javascript being
@@ -16,23 +16,23 @@
 <div id="main-content" class="container">
     <div class="row">
         <div class="col-md-6">
-            <form class="form-inline">
+            <div class="form-inline">
                 <div class="form-group">
                     <label for="connect">WebSocket connection:</label>
                     <button id="connect" class="btn btn-default" type="submit">Connect</button>
                     <button id="disconnect" class="btn btn-default" type="submit" disabled="disabled">Disconnect
                     </button>
                 </div>
-            </form>
+            </div>
         </div>
         <div class="col-md-6">
-            <form class="form-inline">
+            <div class="form-inline">
                 <div class="form-group">
                     <label for="name">What is your name?</label>
                     <input type="text" id="name" class="form-control" placeholder="Your name here...">
                 </div>
                 <button id="send" class="btn btn-default" type="submit">Send</button>
-            </form>
+            </div>
         </div>
     </div>
     <div class="row">

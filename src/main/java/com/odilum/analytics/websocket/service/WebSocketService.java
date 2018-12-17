@@ -1,4 +1,4 @@
-package com.arca.analytics.websocket.service;
+package com.odilum.analytics.websocket.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -20,7 +20,7 @@ public class WebSocketService {
         this.simpMessagingTemplate = simpMessagingTemplate;
     }
 
-    @ServiceActivator(inputChannel = "greeting")
+    @ServiceActivator(inputChannel = "odilum-analytics-data")
     public void pushAnalyticToWebSocket(Message<byte[]> message) {
         System.out.println("The message "+message);
         try {

@@ -13,13 +13,15 @@ function setConnected(connected) {
 }
 
 function connect() {
-    var socket = new SockJS('/gs-guide-websocket');
+    console.log("=============Connected==========");
+    var socket = new SockJS('/ticket-analytics-websocket-service-0.0.1-SNAPSHOT/odilum-analytics');
     stompClient = Stomp.over(socket);
     stompClient.connect({}, function (frame) {
         setConnected(true);
         console.log('Connected: ' + frame);
-        stompClient.subscribe('/topic/greetings', function (greeting) {
-            showGreeting(JSON.parse(greeting.body).content);
+        stompClient.subscribe('/topic/dashboard', function (message) {
+            console.log("====================================================");
+            console.log(message.body);
         });
     });
 }
